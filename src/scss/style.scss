@@ -1,0 +1,123 @@
+
+@import "variables.scss";
+@import "_partial.scss";
+
+body {
+    font: 100% "Space Mono", monospace;
+    color: $grey-one;
+    margin: 0;
+    padding:$padding;
+    background-color: $white;
+    overflow-x: hidden;
+
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+
+    section{
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $grey-two solid;
+        padding: 16px;
+        margin: 16px;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+        @include box-shadow;
+
+        #selling-points {
+            flex-grow: 2;
+            flex-basis: 100%;
+        }
+    }
+    code {
+        background-color: $black;
+        border: 1px solid $grey-one;
+        color: $grey-two;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+
+        &.before {
+            float: left;
+            width: 40%;
+        }
+        &.after {
+            float: right;
+            width: 40%;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+h1,
+h2,
+h3 {
+    color: $pink;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 32px;
+    margin-bottom: 0px;
+    padding: $padding*2;
+}
+
+%message_style{
+    border: 1px solid $grey-two;
+    color: $white;
+    padding: 16px;
+}
+
+
+
+.messages {
+    padding: 16px;
+
+    .success {
+        background-color: $green;
+        @extend %message_style;
+    }
+
+    .error {
+        background-color: $red;
+        @extend %message_style;
+        &:hover{
+            background-color: $green;
+        }
+
+    }
+
+    .warning {
+        background-color: $orange;
+        @extend %message_style;
+}
+    
+    
+
+}
+
+
+
+
+
